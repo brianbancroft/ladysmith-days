@@ -1,62 +1,91 @@
-# remix-vite-template
+# Ladysmith Days
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+![Ladysmith Days Banner](./ladysmith-days-github-banner.jpeg)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+The official website for Ladysmith Days, an annual community celebration held on the first long weekend in Ladysmith, BC.
 
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+## About
 
-Includes the following configuration:
+Ladysmith Days is a beloved community event that brings together residents and visitors to celebrate the heritage and spirit of Ladysmith, British Columbia. Held annually on the first long weekend, the festival features local vendors, entertainment, activities, and more.
 
-- Remix v2.8
-- Vite v5.1
-- Prettier
-- ESlint
-- React 18.3 canary version to prevent hydration issues
-- Tailwind CSS
-- `remix-flat-routes` with _hybrid_ routing
-- Vitest with unit testing and Remix routes test (`createRemixStub`)
-- Playwright E2E testing
-- Fly.io
-- GitHub Action for deployments
-- Remix Dev Tools
-- SVG Sprite Icons
-- Default Error Boundary
+This website provides:
+- Event schedule and information
+- Sponsorship opportunities
+- Volunteer registration
+- Real-time countdown to the event
 
-Portions of the setup were borrowed from [Epic Stack](https://github.com/epicweb-dev/epic-stack)
+## Tech Stack
 
-See the [`docs`](./docs) folder on usage and setup information.
+- **Framework**: Remix v2 with Vite
+- **Runtime**: React 18.3
+- **Styling**: Tailwind CSS
+- **Testing**: Vitest (unit) and Playwright (E2E)
+- **Hosting**: Vercel
 
-## Contributors 😍
+## Getting Started
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+### Prerequisites
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://kiliman.dev/"><img src="https://avatars.githubusercontent.com/u/47168?v=4?s=100" width="100px;" alt="Michael Carter"/><br /><sub><b>Michael Carter</b></sub></a><br /><a href="https://github.com/kiliman/remix-vite-template/commits?author=kiliman" title="Code">💻</a> <a href="https://github.com/kiliman/remix-vite-template/commits?author=kiliman" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/HubbardJacob"><img src="https://avatars.githubusercontent.com/u/48691238?v=4?s=100" width="100px;" alt="Jacob Hubbard"/><br /><sub><b>Jacob Hubbard</b></sub></a><br /><a href="https://github.com/kiliman/remix-vite-template/commits?author=HubbardJacob" title="Code">💻</a> <a href="https://github.com/kiliman/remix-vite-template/commits?author=HubbardJacob" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AlemTuzlak"><img src="https://avatars.githubusercontent.com/u/18480956?v=4?s=100" width="100px;" alt="Alem Tuzlak"/><br /><sub><b>Alem Tuzlak</b></sub></a><br /><a href="https://github.com/kiliman/remix-vite-template/commits?author=AlemTuzlak" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/OnurGvnc"><img src="https://avatars.githubusercontent.com/u/1294640?v=4?s=100" width="100px;" alt="Onur Guvenc"/><br /><sub><b>Onur Guvenc</b></sub></a><br /><a href="https://github.com/kiliman/remix-vite-template/commits?author=OnurGvnc" title="Code">💻</a></td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td align="center" size="13px" colspan="7">
-        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
-          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
-        </img>
-      </td>
-    </tr>
-  </tfoot>
-</table>
+- Node.js >= 20.0.0
+- npm or pnpm
 
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
+### Installation
 
-<!-- ALL-CONTRIBUTORS-LIST:END -->
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd ladysmith-days
+```
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the development server:
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`
+
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run test` - Run unit tests
+- `npm run test:e2e` - Run E2E tests
+- `npm run lint` - Lint code
+- `npm run format` - Format code with Prettier
+
+## Deployment
+
+The site is hosted on **Vercel** with automatic deployments from the main branch.
+
+### Manual Deployment
+
+1. Build the application:
+```bash
+npm run build
+```
+
+2. The build output will be in the `build` directory, ready for deployment to Vercel.
+
+## Project Structure
+
+```
+app/
+├── components/     # React components
+├── routes/         # Remix routes (file-based routing)
+├── styles/         # Global styles
+public/             # Static assets
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+All rights reserved.

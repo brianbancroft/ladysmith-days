@@ -28,73 +28,107 @@ export async function action({ request }: ActionFunctionArgs) {
 
 function SponsorPage() {
   return (
-    <main className="container mx-auto pt-12">
+    <main className="min-h-screen bg-gradient-to-b from-white via-blue-50/20 to-gray-50">
       <PageJumbotron
         imageClass="bg-header-sponsor"
-        title="Help sponsor a free weekend for our town"
-        subtitle="The most important part of Ladysmith Days is that it's a free event for the whole family. There is no admission and it wouldn't happen without support from the local sponsors."
-        slogan="Help support a fun weekend"
+        title="Help sponsor Ladysmith Days - A free weekend for families for decades"
+        subtitle="For over 40 years, Ladysmith Days has brought families together for a completely free weekend of celebration, activities, and community spirit. Every donation directly supports the events, entertainment, and experiences that make this tradition possible."
+        slogan="Support family fun for everyone"
       />
 
-      <section className="w-full  text-white  md:grid md:grid-cols-2 md:gap-x-4">
-        <div className="container mx-auto bg-rose-500 px-12 py-6 text-yellow-300 lg:px-24">
-          <h2 className="py-2 text-xl font-bold md:text-2xl lg:text-3xl">
-            There are many ways to support us
-          </h2>
-          <p className="my-2">
-            The organizations which support Ladysmith Days can support in
-            several ways. Some donate money, which is used for the activities
-            and events. Other companies donate by loaning equipment or providing
-            signage. Others lead activities or support their employees who want
-            to volunteer.
-          </p>
-
-          <p className="my-2">
-            All contributions are welcome. If you wish to assist Ladysmith Days,
-            it all starts with a conversation. The Ladysmith Celebrations
-            Society is happy to find out the best way your team can be a part of
-            the event.
-          </p>
-        </div>
-        <div className="bg-fireworks bg-cover bg-center" />
-      </section>
-
-      <section className="py-6">
-        <div className="container mx-auto">
-          <div
-            className="
-                my-2
-                flex
-                h-32
-                items-center
-                justify-center
-                bg-slate-50
-                px-4
-                py-4
-                shadow
-                
-                
-
-              "
-          >
-            <h2 className="mx-auto w-2/3 text-2xl">
-              Ladysmith Days could not happen without the help of our community
-              partners for 2025:
+      <section className="w-full text-white md:grid md:grid-cols-2 md:gap-x-8">
+        <div className="container mx-auto bg-gradient-to-br from-blue-600 via-blue-700 to-teal-600 px-12 py-12 text-white lg:px-24 shadow-2xl rounded-r-3xl">
+          <div className="relative">
+            <div className="absolute -top-2 -left-2 w-8 h-8 bg-yellow-400 rounded-full opacity-20"></div>
+            <h2 className="py-4 text-2xl font-bold md:text-3xl lg:text-4xl leading-tight">
+              Your support makes family memories possible
             </h2>
           </div>
+          <div className="space-y-6 text-lg leading-relaxed">
+            <p className="text-blue-50">
+              Every donation directly supports the activities and experiences that
+              families enjoy during Ladysmith Days. From the spectacular fireworks
+              display and children's entertainment, to the parade, craft activities,
+              and community events - your contribution helps fund it all.
+            </p>
 
-          <SectionSponsorList />
+            <p className="text-blue-50">
+              Beyond financial support, sponsors can also contribute by loaning
+              equipment, providing signage, leading activities, or encouraging
+              employee volunteerism. Every form of support helps keep this beloved
+              tradition alive for another generation of families.
+            </p>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <p className="font-semibold text-xl text-white">
+                All contributions, big or small, make a difference in creating
+                unforgettable family moments.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-gradient-to-br from-orange-400 via-red-500 to-pink-500 bg-cover bg-center relative overflow-hidden rounded-l-3xl shadow-2xl">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="relative h-full flex items-center justify-center p-8">
+            <div className="text-center text-white">
+              <div className="text-6xl mb-4">🎆</div>
+              <h3 className="text-2xl font-bold mb-2">Celebrate Together</h3>
+              <p className="text-lg opacity-90">Creating magical moments for families</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full mb-6 shadow-lg">
+              <span className="text-2xl text-white">🤝</span>
+            </div>
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 leading-tight">
+                Our Amazing Community Partners
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Ladysmith Days could not happen without the incredible support of our community partners for {new Date().getFullYear()}.
+                Together, we're creating unforgettable experiences for families.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+            <SectionSponsorList />
+          </div>
         </div>
       </section>
 
       <section
         id="contact-us"
-        className="mt-4 flex items-center justify-center bg-cyan-400 p-7 text-blue-600 shadow-2xl drop-shadow-2xl"
+        className="py-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden"
       >
-        <FormContactGeneral
-          description="Talk to us to see how Ladysmith Days can be a way to help your organization or business give back to the town"
-          route="/sponsor"
-        />
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-200/20 via-purple-200/20 to-pink-200/20"></div>
+        </div>
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mb-6 shadow-xl">
+              <span className="text-3xl text-white">💬</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+              Let's Make Magic Together
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-8"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8 md:p-12 backdrop-blur-sm bg-white/90">
+              <FormContactGeneral
+                description="Ready to help create magical family memories? Let's talk about how your organization can support Ladysmith Days and make a lasting impact on our community. Every contribution helps ensure families continue to enjoy this beloved tradition for generations to come."
+                route="/sponsor"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )
