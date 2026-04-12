@@ -1,0 +1,106 @@
+{
+  "capturedAt": "2026-03-30T15:04:24.844Z",
+  "sourceBase": "https://www.ladysmithdays.com",
+  "routes": [
+    {
+      "route": "/",
+      "slug": "home",
+      "imageSrc": [
+        "https://www.ladysmithdays.com/assets/ladysmith-days-logo-e95D3YNt.png"
+      ],
+      "cssBackgrounds": [
+        "https://www.ladysmithdays.com/backgrounds/header-homepage-fireworks.jpg",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-homepage-1.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-homepage-2.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-homepage-3.png",
+        "https://www.ladysmithdays.com/backgrounds/call-homepage-volunteer.png",
+        "https://www.ladysmithdays.com/backgrounds/call-homepage-sponsor.png",
+        "https://www.ladysmithdays.com/backgrounds/call-homepage-vendor.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-bayview.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-coop.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-eagles.png"
+      ]
+    },
+    {
+      "route": "/volunteer",
+      "slug": "volunteer",
+      "imageSrc": [
+        "https://www.ladysmithdays.com/assets/ladysmith-days-logo-e95D3YNt.png"
+      ],
+      "cssBackgrounds": [
+        "https://www.ladysmithdays.com/backgrounds/header-volunteer.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-volunteer-1.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-volunteer-2.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-volunteer-3.png"
+      ]
+    },
+    {
+      "route": "/sponsor",
+      "slug": "sponsor",
+      "imageSrc": [
+        "https://www.ladysmithdays.com/assets/ladysmith-days-logo-e95D3YNt.png"
+      ],
+      "cssBackgrounds": [
+        "https://www.ladysmithdays.com/backgrounds/header-sponsor.jpg",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-ladysmitthcreditunion.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-saltair-marine.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-ladysmithtown.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-coop.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-dollarstore.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-411.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-eagles-ladies.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-kinsmen.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-eagles.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-bethel.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-countrygrocer.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-fmi.jpg",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-bayview.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-coastaltrucking.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-saveonfoods.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-spydergraphix.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-annelynndesign.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-pharmasave.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-home-hardware.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-cupe.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-bayview-framing.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-sponsor-gfl.png"
+      ]
+    },
+    {
+      "route": "/vendor",
+      "slug": "vendor",
+      "imageSrc": [
+        "https://www.ladysmithdays.com/assets/ladysmith-days-logo-e95D3YNt.png"
+      ],
+      "cssBackgrounds": [
+        "https://www.ladysmithdays.com/backgrounds/header-vendor.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-vendor-1.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-vendor-2.png",
+        "https://www.ladysmithdays.com/backgrounds/sponsor-vendor-3.png",
+        "https://www.ladysmithdays.com/backgrounds/link-vendor-food.png",
+        "https://www.ladysmithdays.com/backgrounds/link-vendor-merch.png"
+      ]
+    },
+    {
+      "route": "/citizen-of-the-year",
+      "slug": "citizen-of-the-year",
+      "imageSrc": [
+        "https://www.ladysmithdays.com/assets/ladysmith-days-logo-e95D3YNt.png",
+        "https://www.ladysmithdays.com/citizen-of-the-year",
+        "https://www.ladysmithdays.com/assets/coty-kathy-holmes-2023-Y61JnOio.png",
+        "https://www.ladysmithdays.com/assets/coty-barry-frech-2022-nRlNBLIo.png"
+      ],
+      "cssBackgrounds": [
+        "https://www.ladysmithdays.com/backgrounds/header-coty.png"
+      ]
+    },
+    {
+      "route": "/privacy",
+      "slug": "privacy",
+      "imageSrc": [
+        "https://www.ladysmithdays.com/assets/ladysmith-days-logo-e95D3YNt.png"
+      ],
+      "cssBackgrounds": []
+    }
+  ]
+}

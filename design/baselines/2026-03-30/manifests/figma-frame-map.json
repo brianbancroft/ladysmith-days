@@ -1,0 +1,191 @@
+{
+  "figmaFile": "https://www.figma.com/design/eXfcTiYJoIh33SawtjkBvx/Website?node-id=0-1&t=43gYJhazolucOkZs-1",
+  "pageName": "Ladysmith Days Baselines",
+  "sections": [
+    "Desktop Baselines",
+    "Mobile Baselines",
+    "Mobile Interactive States"
+  ],
+  "frames": [
+    {
+      "section": "Desktop Baselines",
+      "frameName": "Desktop / Home / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-home-default.png",
+      "suggestedPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "suggestedFrameWidth": 1440
+    },
+    {
+      "section": "Desktop Baselines",
+      "frameName": "Desktop / Volunteer / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-volunteer-default.png",
+      "suggestedPosition": {
+        "x": 1600,
+        "y": 0
+      },
+      "suggestedFrameWidth": 1440
+    },
+    {
+      "section": "Desktop Baselines",
+      "frameName": "Desktop / Sponsor / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-sponsor-default.png",
+      "suggestedPosition": {
+        "x": 3200,
+        "y": 0
+      },
+      "suggestedFrameWidth": 1440
+    },
+    {
+      "section": "Desktop Baselines",
+      "frameName": "Desktop / Vendor / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-vendor-default.png",
+      "suggestedPosition": {
+        "x": 4800,
+        "y": 0
+      },
+      "suggestedFrameWidth": 1440
+    },
+    {
+      "section": "Desktop Baselines",
+      "frameName": "Desktop / Citizen of the Year / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-citizen-of-the-year-default.png",
+      "suggestedPosition": {
+        "x": 6400,
+        "y": 0
+      },
+      "suggestedFrameWidth": 1440
+    },
+    {
+      "section": "Desktop Baselines",
+      "frameName": "Desktop / Privacy / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-privacy-default.png",
+      "suggestedPosition": {
+        "x": 8000,
+        "y": 0
+      },
+      "suggestedFrameWidth": 1440
+    },
+    {
+      "section": "Mobile Baselines",
+      "frameName": "Mobile / Home / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-home-default.png",
+      "suggestedPosition": {
+        "x": 0,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Baselines",
+      "frameName": "Mobile / Volunteer / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-volunteer-default.png",
+      "suggestedPosition": {
+        "x": 550,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Baselines",
+      "frameName": "Mobile / Sponsor / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-sponsor-default.png",
+      "suggestedPosition": {
+        "x": 1100,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Baselines",
+      "frameName": "Mobile / Vendor / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-vendor-default.png",
+      "suggestedPosition": {
+        "x": 1650,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Baselines",
+      "frameName": "Mobile / Citizen of the Year / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-citizen-of-the-year-default.png",
+      "suggestedPosition": {
+        "x": 2200,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Baselines",
+      "frameName": "Mobile / Privacy / Default",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-privacy-default.png",
+      "suggestedPosition": {
+        "x": 2750,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Interactive States",
+      "frameName": "Mobile / Home / Nav Open",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-home-nav-open.png",
+      "suggestedPosition": {
+        "x": 3500,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Interactive States",
+      "frameName": "Mobile / Volunteer / Nav Open",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-volunteer-nav-open.png",
+      "suggestedPosition": {
+        "x": 4050,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Interactive States",
+      "frameName": "Mobile / Sponsor / Nav Open",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-sponsor-nav-open.png",
+      "suggestedPosition": {
+        "x": 4600,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Interactive States",
+      "frameName": "Mobile / Vendor / Nav Open",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-vendor-nav-open.png",
+      "suggestedPosition": {
+        "x": 5150,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Interactive States",
+      "frameName": "Mobile / Citizen of the Year / Nav Open",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-citizen-of-the-year-nav-open.png",
+      "suggestedPosition": {
+        "x": 5700,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    },
+    {
+      "section": "Mobile Interactive States",
+      "frameName": "Mobile / Privacy / Nav Open",
+      "sourceImagePath": "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-privacy-nav-open.png",
+      "suggestedPosition": {
+        "x": 6250,
+        "y": 7000
+      },
+      "suggestedFrameWidth": 390
+    }
+  ]
+}

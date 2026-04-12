@@ -1,0 +1,63 @@
+{
+  "capturedAt": "2026-03-30T15:02:54.031Z",
+  "sourceBase": "https://www.ladysmithdays.com",
+  "desktopViewport": {
+    "width": 1440
+  },
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "slug": "home",
+      "path": "/"
+    },
+    {
+      "slug": "volunteer",
+      "path": "/volunteer"
+    },
+    {
+      "slug": "sponsor",
+      "path": "/sponsor"
+    },
+    {
+      "slug": "vendor",
+      "path": "/vendor"
+    },
+    {
+      "slug": "citizen-of-the-year",
+      "path": "/citizen-of-the-year"
+    },
+    {
+      "slug": "privacy",
+      "path": "/privacy"
+    }
+  ],
+  "files": {
+    "desktop": [
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-home-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-volunteer-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-sponsor-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-vendor-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-citizen-of-the-year-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/desktop/desktop-privacy-default.png"
+    ],
+    "mobile": [
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-home-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-volunteer-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-sponsor-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-vendor-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-citizen-of-the-year-default.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile/mobile-privacy-default.png"
+    ],
+    "mobileNavOpen": [
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-home-nav-open.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-volunteer-nav-open.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-sponsor-nav-open.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-vendor-nav-open.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-citizen-of-the-year-nav-open.png",
+      "/Users/brianbancroft/programming/ladysmith/ladysmith-days/design/baselines/2026-03-30/mobile-nav-open/mobile-privacy-nav-open.png"
+    ]
+  }
+}

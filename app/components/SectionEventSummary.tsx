@@ -57,6 +57,7 @@ function SectionEventSummary(props: Props) {
 
       <div className="relative z-10 px-4 md:px-8 lg:px-16">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="overflow-hidden pt-6">
           <h2 className="
             font-heading
             font-bold
@@ -81,6 +82,7 @@ function SectionEventSummary(props: Props) {
               </span>
             )}
           </h2>
+          </div>
           <div className="
             w-24
             h-1

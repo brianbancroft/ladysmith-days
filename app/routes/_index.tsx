@@ -10,7 +10,6 @@ import SectionOurPlan from '~/components/SectionOurPlan'
 import SectionSocialContact from '~/components/SectionSocialContact'
 import TimerClock from '~/components/TimerClock'
 import { HomepageSponsors } from '~/components/HomepageSponsors'
-import { HomepageSponsors2 } from '~/components/HomepageSponsors2'
 import { SectionSchedule } from '~/components/SectionSchedule'
 
 export const meta: MetaFunction = () => {
@@ -281,29 +280,6 @@ export default function Index() {
 
         <div className="fade-in-delay-5">
           <SectionSocialContact />
-        </div>
-      </div>
-      <HomepageSponsors2 />
-
-      <div className="py-8 md:hidden">
-        <div className="grid h-48 grid-cols-1 gap-4 px-4">
-          <a
-            href="https://ladysmith.ca"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-200 rounded-lg p-4 transition-all duration-500 hover:bg-gray-100 hover:shadow-lg"
-          >
-            <div className="flex h-full w-full items-center justify-center bg-sponsor-homepage-1 bg-contain bg-center bg-no-repeat"></div>
-          </a>
-
-          <a
-            href="https://www.ladysmithkinsmen.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-200 rounded-lg p-4 transition-all duration-500 hover:bg-gray-100 hover:shadow-lg"
-          >
-            <div className="flex h-full w-full items-center justify-center bg-sponsor-homepage-3 bg-contain bg-center bg-no-repeat"></div>
-          </a>
         </div>
       </div>
     </main>
