@@ -1,39 +1,22 @@
-import {
-  type ActionFunctionArgs,
-  type MetaFunction,
-  redirect,
-} from '@remix-run/node'
+import { type MetaFunction } from '@remix-run/node'
 import CitizenArchive from '~/components/CitizenArchive'
 import CitizenLatest from '~/components/CitizenLatest'
 import CitizenRecent from '~/components/CitizenRecent'
-import FormContactGeneral from '~/components/FormContactGeneral'
 import PageJumbotron from '~/components/PageJumbotron'
 import {
   archivedRecipients,
   latestRecipient,
   recentRecipients,
 } from '~/data/citizenOfTheYear'
-import { sendEmail } from '~/server/sendEmail.server'
-
-export async function action({ request }: ActionFunctionArgs) {
-  const formData = new URLSearchParams(await request.text())
-  const name = String(formData.get('name'))
-  const email = String(formData.get('email'))
-  const message = String(formData.get('message'))
-
-  await sendEmail({ name, email, message, page: 'Citizen of the Year' })
-
-  return redirect('/?sent=true')
-}
 
 export const meta: MetaFunction = () => [
   {
-    title: 'Citizen of the Year - Ladysmith Days',
-    description: "Nominate Ladysmith's citizen fo the year!",
+    title: 'Ladysmith Community Impact Award - Ladysmith Days',
+    description: 'Nominate an individual or organization for the Ladysmith Community Impact Award!',
   },
 ]
 
-const acceptingSubmissions = true
+const NOMINATION_FORM_URL = 'https://forms.gle/xX8paCVydZVKmeUv8'
 
 const CitizenOfTheYearPage = () => {
   return (
@@ -41,10 +24,47 @@ const CitizenOfTheYearPage = () => {
       <main className="container mx-auto pt-12">
         <PageJumbotron
           imageClass="bg-header-coty"
-          title="Celebrate those who make our town the best"
-          subtitle="The Citizen of the Year Award is presented for outstanding Community Service over a period of time. The service must be voluntary and does not include service where there has been a connection to normal employment. Businesses, organizations and service groups are welcome to nominate individuals in recognition of their volunteer service."
-          slogan="Citizen of the year"
+          slogan="Ladysmith Community Impact Award"
         />
+
+        <section className="bg-cyan-300 px-6 py-8 text-blue-700">
+          <div className="mx-auto max-w-3xl flex flex-col gap-4">
+            <p className="text-lg">
+              From our historic streets to our beautiful waterfront, what truly makes Ladysmith
+              special is the incredible spirit of the people who live here. For many years, our
+              community has honored that local dedication through the traditional Citizen of the Year
+              award. This year, we are updating this tradition to better capture the full heart and
+              diverse efforts of our community.
+            </p>
+            <p className="text-xl font-bold">
+              We are proud to introduce the Ladysmith Community Impact Award.
+            </p>
+            <p className="text-lg">
+              The unique charm and strength of Ladysmith are shaped not only by extraordinary
+              individuals but also by the dedicated local organizations, non-profits, and groups that
+              work tirelessly behind the scenes. To ensure we can celebrate all forms of community
+              service, this newly expanded award recognizes either an individual or an organization
+              whose volunteer work, leadership, and dedication have made a lasting, positive
+              difference in our town.
+            </p>
+            <p className="text-lg">
+              If you know an individual or a group whose selfless efforts bring the true spirit of
+              Ladysmith to life every day, we invite you to submit your nomination below. Thank you
+              for helping us recognize those who keep the heart of our community beating strong.
+            </p>
+            <div>
+              <a
+                href={NOMINATION_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-lg bg-purple-700 px-8 py-3 text-lg font-semibold text-white transition-colors duration-300 hover:bg-purple-800"
+              >
+                Nominate someone now
+              </a>
+            </div>
+          </div>
+        </section>
+
 
         <section
           id="citizen-of-the-year-latest"
@@ -109,22 +129,16 @@ const CitizenOfTheYearPage = () => {
             ))}
           </div>
         </section>
-        {acceptingSubmissions && (
-          <section
-            id="contact-us"
-            className="flex items-center justify-center bg-blue-50 p-7 shadow-2xl drop-shadow-2xl"
+        <section className="my-8 flex justify-center">
+          <a
+            href={NOMINATION_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-purple-700 px-8 py-3 text-lg font-semibold text-white transition-colors duration-300 hover:bg-purple-800"
           >
-            <FormContactGeneral
-              title="Nominate the next Citizen of the Year"
-              description="If there is a volunteer you believe has been contributing to the
-                community outside their place of work, this is their chance to
-                be recognized. Give us a few words about this excellent citizen, and we will get in touch with you. Nominations are accepted until the 1st of July of each
-                year."
-              route="/citizen-of-the-year"
-              placeholder="In a few sentences, tell us why your nominee would make an excellent Citizen of the Year."
-            />
-          </section>
-        )}
+            Nominate someone now
+          </a>
+        </section>
       </main>
     </>
   )
