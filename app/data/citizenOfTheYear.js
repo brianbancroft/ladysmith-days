@@ -1,15 +1,22 @@
 import barryFrech from './photos/coty-barry-frech-2022.png'
 import kathyHolmes from './photos/coty-kathy-holmes-2023.png'
+import arleneJaswal from './photos/coty-arlene-jaswal-2025.png'
 
 export const latestRecipient = {
-  year: '2024',
-  name: 'Dave Judson and the Ladysmith Sportsmen Club',
-  image: '',
-  copy: `The Ladysmith Sportsment Club is not seen in town as much as other organizations as they are focused outside the town limits. In addition to managing the Bush Creek Fish Hatchery, they also lead the annual Earth Day cleanup in the forest lands around Ladysmith.`,
+  year: '2025',
+  name: 'Arlene Jaswal',
+  image: arleneJaswal,
+  copy: `The late Arlene Jaswal was posthumously awarded the 2025 Citizen of the Year award in recognition of her boundless energy and lifelong dedication to Ladysmith. A vibrant, irreplaceable force at the heart of the community, Arlene poured her time, ideas, and infectious enthusiasm into nearly every local tradition, from Music in the Park and Light Up to coordinating Ladysmith Days. Whether she was enthusiastically running the greasy pole contests, managing zucchini races, or working behind the scenes, she made community service fun, easy, and worthwhile for everyone around her. Though deeply missed, her monumental contributions and inspirational spirit continue to leave a lasting impact on the community she loved so much.`,
 }
 
 // Must be maximum length of four
 export const recentRecipients = [
+  {
+    name: 'Dave Judson and the Ladysmith Sportsmen Club',
+    year: '2024',
+    image: '',
+    copy: `The Ladysmith Sportsmen Club is not seen in town as much as other organizations as they are focused outside the town limits. In addition to managing the Bush Creek Fish Hatchery, they also lead the annual Earth Day cleanup in the forest lands around Ladysmith.`,
+  },
   {
     name: 'Kathy Holmes',
     year: '2023',
@@ -53,20 +60,18 @@ export const recentRecipients = [
     name: 'Denny Forrest',
     image: '',
   },
-  {
-    year: '2018',
-    name: 'Ray Delcourt',
-    image: '',
-  },
-  {
-    year: '2017',
-    name: 'James "Jim" Delcourt',
-    image: '',
-  },
 ]
 
 // Must be maximum length of four
 export const archivedRecipients = [
+  {
+    year: '2018',
+    name: 'Ray Delcourt',
+  },
+  {
+    year: '2017',
+    name: 'James "Jim" Delcourt',
+  },
   {
     year: '2016',
     name: 'Myfanwy Plecas',
