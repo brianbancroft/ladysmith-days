@@ -7,7 +7,7 @@ const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/volunteer', label: 'Volunteer' },
   { to: '/sponsor', label: 'Sponsor' },
-  { to: '/citizen-of-the-year', label: 'Citizen of the Year' },
+  { to: '/citizen-of-the-year', label: 'Community Impact Award' },
 ]
 
 function Nav() {
