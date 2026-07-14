@@ -144,6 +144,11 @@ export default {
         'ld-green': withOpacity('--ld-green'),
         'ld-purple': withOpacity('--ld-purple'),
       },
+      colors: {
+        'ld-gold': '#FFD23F',
+        'ld-navy': '#2E4FA3',
+        'ld-slate': '#5A6DB0',
+      },
     },
   },
 

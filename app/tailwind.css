@@ -839,6 +839,16 @@
   100% { background-position: 0% 50%; }
 }
 
+@keyframes petalFloat {
+  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
+  50% { transform: translateY(-16px) rotate(var(--r, 0deg)); }
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(7px); }
+}
+
 .interactive-btn {
   position: relative;
   overflow: hidden;

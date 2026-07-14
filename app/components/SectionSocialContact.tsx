@@ -1,68 +1,27 @@
-import { Icon } from '@iconify/react'
-
 const SectionSocialContact = () => {
   return (
-    <a
-      href="//www.facebook.com/LadysmithDays"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <section
-        id="keep-in-touch"
-        className="
-            flex
-            flex-col
-            bg-blue-800
-            p-7
-            text-white md:w-11/12 md:flex-row
-            md:rounded-br-full md:rounded-tr-full
-            md:pr-0
-          "
+    <section id="keep-in-touch" className="py-[30px] pb-[60px]">
+      <a
+        href="https://www.facebook.com/LadysmithDays"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-[22px] flex-wrap bg-blue-900 text-white py-[26px] px-7 max-w-[980px] rounded-r-full mr-6 transition-colors hover:bg-blue-700"
       >
-        <div
-          className="
-              w-48
-              md:pl-8
-            "
-        >
-          <div className="group my-2 w-4/5 px-4 py-3 text-white md:w-1/4 ">
-            <div className="flex">
-              <div className="rounded-sm border-2 p-2 transition-all duration-500 group-hover:bg-blue-500">
-                <Icon icon="cib:facebook-f" width={60} />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="max-w-prose md:w-3/5">
-          <div className="flex items-center transition ease-in-out hover:text-orange-500">
-            <h1 className="font-sans my-3 font-heading text-xl md:text-4xl">
-              Keep up to date
-            </h1>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              aria-hidden="true"
-              className="ml-3 h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              ></path>
-            </svg>
-          </div>
-          <p className="text-sm">
-            While this website will contain the finalized schedule, we will be
-            releasing information about this year&lsquo;s event over Facebook.
-            There, you can talk to us through Facebook Messenger, and see
-            updates.
-          </p>
-        </div>
-      </section>
-    </a>
+        <span className="flex items-center justify-center w-16 h-16 border-[3px] border-white rounded-[10px] font-extrabold text-4xl text-white shrink-0 ml-1 md:ml-[clamp(4px,4vw,44px)]">
+          f
+        </span>
+        <span className="flex flex-col gap-1 max-w-[560px] min-w-[240px] flex-1">
+          <span className="font-bold text-[clamp(20px,2.6vw,28px)] text-white">
+            Keep up to date ↗
+          </span>
+          <span className="text-[14.5px] text-[#C7D6F5] leading-relaxed font-medium">
+            This website carries the finalized schedule, but we release news about
+            this year&apos;s event over Facebook — talk to us on Messenger and see
+            updates there.
+          </span>
+        </span>
+      </a>
+    </section>
   )
 }
 

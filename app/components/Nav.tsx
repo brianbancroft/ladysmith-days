@@ -4,7 +4,8 @@ import NavIcon from './NavIcon'
 import logo from '~/assets/ladysmith-days-logo.png'
 
 const navLinks = [
-  { to: '/', label: 'Home' },
+  { to: '/#schedule', label: 'Schedule', emphasis: true },
+  { to: '/#where', label: 'Where to go' },
   { to: '/volunteer', label: 'Volunteer' },
   { to: '/sponsor', label: 'Sponsor' },
   { to: '/citizen-of-the-year', label: 'Community Impact Award' },
@@ -15,44 +16,43 @@ function Nav() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 shadow-lg border-b border-blue-600/20">
+      <nav className="sticky top-0 z-50 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-16 gap-3">
             {/* Logo/Brand */}
-            <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-3 group">
-                <img
-                  src={logo}
-                  alt="Ladysmith Days Logo"
-                  className="h-10 w-auto transition-transform duration-200 group-hover:scale-105"
-                />
-                <div className="hidden sm:block">
-                  <span className="text-xl font-bold text-white tracking-tight">
-                    Ladysmith Days
-                  </span>
-                  <div className="text-xs text-blue-200 font-medium">
-                    August 1-2, 2026
-                  </div>
-                </div>
-              </Link>
-            </div>
+            <Link to="/" className="flex items-center gap-2.5 group shrink-0">
+              <img
+                src={logo}
+                alt="Ladysmith Days Logo"
+                className="h-10 w-auto transition-transform duration-200 group-hover:scale-105"
+              />
+              <span className="hidden sm:flex flex-col leading-tight">
+                <span className="text-lg font-bold text-white tracking-tight">
+                  Ladysmith Days
+                </span>
+                <span className="text-xs text-blue-200 font-medium">
+                  August 1-2, 2026
+                </span>
+              </span>
+            </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navLinks.map(({ to, label }) => (
+            <div className="hidden lg:flex items-center gap-1">
+              {navLinks.map(({ to, label, emphasis }) => (
                 <Link
                   key={to}
                   to={to}
-                  className="nav-link text-white hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:bg-white/10 relative group"
+                  className={`nav-link px-3 py-2 rounded-md text-sm font-semibold transition-all duration-200 hover:bg-white/10 ${
+                    emphasis ? 'text-ld-gold' : 'text-white hover:text-yellow-300'
+                  }`}
                 >
                   <span className="relative z-10">{label}</span>
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-200 group-hover:w-full" />
                 </Link>
               ))}
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button
                 onClick={() => setOpen(true)}
                 className="inline-flex justify-center px-3 py-2 rounded-md text-white hover:text-yellow-300 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-all duration-200"
@@ -67,7 +67,7 @@ function Nav() {
 
       {/* Drawer overlay */}
       <div
-        className={`fixed inset-0 z-50 md:hidden transition-opacity duration-300 ${open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'}`}
+        className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-300 ${open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'}`}
       >
         {/* Backdrop */}
         <div

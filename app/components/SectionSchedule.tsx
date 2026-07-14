@@ -1,129 +1,208 @@
-import Starburst from './Starburst'
+import type { ReactNode } from 'react'
+
+type ScheduleItem = {
+  title: ReactNode
+  time: string
+  emphasis?: boolean
+}
+
+type ScheduleVenue = {
+  label: string
+  mapHref: string
+  dotColor: string
+  chipBg: string
+  chipColor: string
+  items: ScheduleItem[]
+  note?: ReactNode
+}
+
+const saturday: ScheduleVenue[] = [
+  {
+    label: 'Oyster Bay Marina',
+    mapHref: 'https://www.google.com/maps/search/?api=1&query=48.996127,-123.814068',
+    dotColor: '#8E5BB5',
+    chipBg: '#F0E8F8',
+    chipColor: '#8E5BB5',
+    items: [{ title: 'Bullhead Derby', time: '7 AM' }],
+  },
+  {
+    label: 'Transfer Beach',
+    mapHref: 'https://maps.app.goo.gl/paWKAUm6MGFgEuLm9',
+    dotColor: '#EF5562',
+    chipBg: '#FDE7E9',
+    chipColor: '#EF5562',
+    items: [
+      { title: 'Rotary Pancake Breakfast', time: '9:30 AM' },
+      { title: 'Ladysmith Days Expo & Market', time: '10 AM', emphasis: true },
+      { title: 'Kids Crafts Table', time: '10 AM' },
+      { title: 'Old Time Games', time: '12 PM' },
+      { title: 'Beer Garden', time: '12 PM' },
+      { title: 'Kids Entertainment (Woodstick)', time: '12 PM' },
+      { title: 'Nail Driving Contest', time: '1 PM' },
+      { title: 'Zucchini Races', time: '2 PM' },
+      { title: 'Greasy Pole Contest', time: '3 PM' },
+      {
+        title: (
+          <>
+            Professional Wrestling{' '}
+            <span className="font-semibold text-sm text-ld-slate">feat. VIPW</span>
+          </>
+        ),
+        time: '5:15 PM',
+        emphasis: true,
+      },
+    ],
+  },
+]
+
+const sunday: ScheduleVenue[] = [
+  {
+    label: 'Downtown 1st Ave',
+    mapHref: 'https://www.google.com/maps/search/?api=1&query=48.993262,-123.817340',
+    dotColor: '#1FA3A0',
+    chipBg: '#E0F4F3',
+    chipColor: '#158784',
+    items: [
+      {
+        title: (
+          <>
+            Soap Box Derby{' '}
+            <span className="font-medium text-sm text-ld-slate whitespace-nowrap">
+              — meet at 1st &amp; Gatacre
+            </span>
+          </>
+        ),
+        time: '10 AM',
+        emphasis: true,
+      },
+      { title: 'Skateboard Demo', time: '10 AM' },
+    ],
+  },
+  {
+    label: 'Transfer Beach',
+    mapHref: 'https://maps.app.goo.gl/paWKAUm6MGFgEuLm9',
+    dotColor: '#EF5562',
+    chipBg: '#FDE7E9',
+    chipColor: '#EF5562',
+    items: [
+      {
+        title: (
+          <>
+            <span style={{ color: '#2E4FA3' }}>L</span>
+            <span style={{ color: '#F58220' }}>D</span>
+            <span style={{ color: '#6CBE45' }}>C</span>
+            <span style={{ color: '#56B4E4' }}>U</span> Kids Fun Zone
+          </>
+        ),
+        time: '11 AM',
+        emphasis: true,
+      },
+      { title: 'Bands on the Beach', time: '12 PM', emphasis: true },
+    ],
+    note: (
+      <>
+        With beer garden featuring <strong>Bayview Brewing</strong>.
+      </>
+    ),
+  },
+]
+
+const bands = ['Peace, Love and Joy', 'Sarah Leo', 'Sol Blue Vibes', 'Pontiac Bandits', 'Ryan Mc Mahon']
+
+function VenueBlock({ venue }: { venue: ScheduleVenue }) {
+  return (
+    <div className="flex flex-col gap-2">
+      <a
+        href={venue.mapHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="self-start flex items-center gap-2 font-bold text-sm px-3.5 py-1.5 rounded-full transition-colors"
+        style={{ background: venue.chipBg, color: venue.chipColor }}
+      >
+        <span
+          className="w-[9px] h-[9px] rounded-full inline-block"
+          style={{ background: venue.dotColor }}
+        />
+        {venue.label}
+        <span className="text-xs font-semibold opacity-75">Map ↗</span>
+      </a>
+      {venue.items.map(({ title, time, emphasis }, i) => (
+        <div key={i} className="flex justify-between gap-3 items-baseline">
+          <span className={`text-base ${emphasis ? 'font-bold' : 'font-semibold'}`}>{title}</span>
+          <span className="font-extrabold text-sm whitespace-nowrap">{time}</span>
+        </div>
+      ))}
+      {venue.note ? (
+        <p className="m-0 text-sm font-medium text-ld-slate leading-relaxed">{venue.note}</p>
+      ) : null}
+    </div>
+  )
+}
 
 export function SectionSchedule() {
   return (
-    <article className="overflow-x-hidden">
-      <div className="relative z-10 hidden h-0 w-0 xl:block">
-        <Starburst className="relative -left-[150px] top-12 z-0 w-[340px] -rotate-12 opacity-80" />
-      </div>
-      <div className="z-20 mx-auto max-w-2xl rounded-lg bg-white p-8 shadow-lg xl:max-w-5xl">
-        <div className="mb-6 -rotate-1 transform bg-ld-green p-6 shadow-lg">
-          <h1 className="my-3 font-heading text-4xl font-bold text-ld-yellow">
-            2026 SCHEDULE
-          </h1>
-        </div>
-
-        <h2 className="mb-1 font-heading text-2xl font-semibold text-red-500">
-          SATURDAY
+    <section id="schedule" className="pt-14 pb-8 px-4 max-w-[1160px] mx-auto">
+      <div className="text-center flex flex-col gap-2.5 items-center mb-8">
+        <h2 className="m-0 font-extrabold text-[clamp(30px,4.4vw,52px)] text-ld-navy">
+          The Schedule
         </h2>
-
-        <h3 className="mb-2 text-xl font-semibold text-red-500">
-          OYSTER BAY MARINA
-        </h3>
-        <ul className="mb-4 list-inside list-disc marker:text-red-500">
-          <li className="text-ld-dark-blue lg:text-xl">
-            BULLHEAD DERBY | 7 - 9 AM
-          </li>
-        </ul>
-
-        <div className="relative z-10 h-0 w-0">
-          <Starburst className="relative -top-32 left-[450px] z-0 w-[320px] -rotate-12 opacity-80 md:w-[400px] lg:left-[450px] xl:left-[850px] xl:w-[500px]" />
-        </div>
-
-        <h3 className="mb-2 text-xl font-semibold text-red-500">
-          TRANSFER BEACH
-        </h3>
-        <ul className="mb-4 list-inside list-disc marker:text-red-500 lg:text-xl">
-          <li className="text-ld-dark-blue">ROTARY PANCAKE BREAKFAST | 8 AM</li>
-          <li className="text-ld-dark-blue">FOOD & MERCHANDISE VENDORS</li>
-          <li className="font-semibold italic text-ld-dark-blue">
-            LADYSMITH DAYS EXPO | 10 AM - 2 PM
-          </li>
-          <li className="text-ld-dark-blue">OLD TIME GAMES | 12 PM</li>
-          <li className="text-ld-dark-blue">
-            KIDS CRAFTS TABLE | 10 AM - 3 PM
-          </li>
-          <li className="text-ld-dark-blue">NAIL DRIVING CONTEST | 1 PM</li>
-          <li className="text-ld-dark-blue">ZUCCHINI RACES | 2 PM</li>
-          <li className="text-ld-dark-blue">GREASY POLE COMPETITION | 3 PM</li>
-
-          <li className="text-ld-dark-blue">BEER GARDEN | 12 PM - 10 PM</li>
-          <li className="font-semibold italic text-ld-dark-blue">
-            PROFESSIONAL WRESTLING | 5:15 PM
-          </li>
-        </ul>
-
-        <div className="relative z-10 h-0 w-0">
-          <Starburst className="relative -left-[300px] -top-12 z-0 w-72 -rotate-12 opacity-80 xl:-left-[500px] xl:-top-12 xl:w-96" />
-        </div>
-
-        <hr className="my-8 h-4 rounded-full border-0 bg-ld-yellow" />
-
-        <h2 className="mb-1 mt-4 font-heading text-2xl font-semibold text-purple-500">
-          SUNDAY
-        </h2>
-
-        <h3 className="mb-2 text-xl font-semibold text-purple-500">
-          DOWNTOWN 1ST AVE
-        </h3>
-        <ul className="mb-4 list-inside list-disc marker:text-purple-500 lg:text-xl">
-          <li className="font-semibold italic text-ld-dark-blue">
-            SOAP BOX DERBY | 10 AM
-          </li>
-          <li className="text-ld-dark-blue">SKATEBOARD DEMO | 10 AM</li>
-        </ul>
-
-        <h3 className="mb-2 text-xl font-semibold text-purple-500">
-          TRANSFER BEACH
-        </h3>
-        <ul className="mb-4 list-inside list-disc marker:text-purple-500 lg:text-xl">
-          <li className="text-ld-dark-blue">FOOD VENDORS</li>
-          <li className="text-ld-dark-blue">BEER GARDEN | 12 PM - 10 PM</li>
-          <li className="font-semibold italic text-ld-dark-blue">
-            LDCU KIDS FUN ZONE | 11 AM
-          </li>
-          <li className="text-ld-dark-blue">CLIMBING WALL | 11 AM</li>
-        </ul>
+        <div className="w-[110px] h-1.5 bg-ld-gold rounded-full" />
+        <p className="m-0 font-medium text-[17px] text-ld-slate">
+          Tap any venue for directions — admission and participation are free.
+        </p>
       </div>
 
-      <section className="relative bottom-3 mx-auto mb-12 lg:mb-24">
-        <div className="mx-auto md:w-3/4">
-          <div className="-rotate-2 bg-ld-light-blue p-1">
-            <div className="rotate-1 bg-blue-700 p-2">
-              <div className="transform bg-ld-yellow p-6 shadow-lg">
-                <h3 className="mb-4 text-2xl font-bold text-ld-dark-blue">
-                  <span className="font-heading text-3xl">
-                    BANDS ON THE BEACH{' '}
-                  </span>
-                  | SUNDAY
-                </h3>
-                
-                <p className="mb-2 text-lg font-light text-ld-purple">
-                  FEATURING
-                </p>
-                <ul className="mb-4 space-y-1 text-lg font-semibold text-ld-purple">
-                  <li>
-                    LEE WORDEN <span className="text-ld-dark-blue text-base">11:00</span> • PEACE, LOVE AND JOY <span className="text-ld-dark-blue text-base">11:45</span> • LATITUD 0° TROPICAL DUO <span className="text-ld-dark-blue text-base">12:30</span>
-                  </li>
-                  <li>
-                    SOL BLUE VIBES <span className="text-ld-dark-blue text-base">1:15</span> • SARAH LEO <span className="text-ld-dark-blue text-base">2:00</span> • DIAMOND DAWGS <span className="text-ld-dark-blue text-base">2:45</span>
-                  </li>
-                  <li>JOHNNY RIGHTEOUS <span className="text-ld-dark-blue text-base">3:45</span> • ANDY MCCORMACK <span className="text-ld-dark-blue text-base">4:30</span> • COVER GIRL <span className="text-ld-dark-blue text-base">5:15</span> • BRYCE ALLAN <span className="text-ld-dark-blue text-base">6:30</span></li>
-                </ul>
-                <p className="my-3 text-lg font-light text-blue-600">
-                  CITIZEN OF THE YEAR PRESENTATION | 7:45 PM
-                </p>
-                <p className="mb-3 text-2xl font-bold text-ld-purple">
-                  <span className="text-lg font-light">AND</span> SUNSET STRIP | 8:00 PM
-                </p>
-                <p className="my-1 text-2xl font-bold text-blue-600">
-                  FIREWORKS STARTING AT 10 PM
-                </p>
-              </div>
+      <div className="grid gap-6 items-stretch" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(340px,100%),1fr))' }}>
+        <article className="bg-white border-[3px] border-[#6CBE45] rounded-3xl overflow-hidden shadow-[0_14px_34px_rgba(46,79,163,.10)]">
+          <div className="bg-[#6CBE45] text-white text-center py-3.5 px-3">
+            <div className="font-extrabold text-[clamp(22px,2.6vw,28px)] tracking-wide italic">
+              Saturday, August 1<sup>st</sup>
             </div>
           </div>
-        </div>
-      </section>
-    </article>
+          <div className="px-5 pt-[18px] pb-[22px] flex flex-col gap-[18px]">
+            {saturday.map((venue) => (
+              <VenueBlock key={venue.label} venue={venue} />
+            ))}
+          </div>
+        </article>
+
+        <article className="bg-white border-[3px] border-[#56B4E4] rounded-3xl overflow-hidden shadow-[0_14px_34px_rgba(46,79,163,.10)]">
+          <div className="bg-[#56B4E4] text-white text-center py-3.5 px-3">
+            <div className="font-extrabold text-[clamp(22px,2.6vw,28px)] tracking-wide italic">
+              Sunday, August 2<sup>nd</sup>
+            </div>
+          </div>
+          <div className="px-5 pt-[18px] pb-[22px] flex flex-col gap-[18px]">
+            {sunday.map((venue) => (
+              <VenueBlock key={venue.label} venue={venue} />
+            ))}
+            <div className="flex flex-col gap-[5px] -mt-2 border-l-[3px] border-[#EEF2FE] pl-3">
+              {bands.map((band) => (
+                <span key={band} className="font-semibold text-[15px] text-ld-navy">
+                  {band}
+                </span>
+              ))}
+              <span className="font-semibold text-sm text-[#9A6A00]">
+                Community Impact Award presentation
+              </span>
+              <span className="flex items-center gap-2 font-extrabold text-[17px] text-ld-navy">
+                Sunset Strip
+                <span className="bg-ld-gold text-[#7A5200] font-bold text-[11px] tracking-wider uppercase px-2.5 py-0.5 rounded-full">
+                  Headliner
+                </span>
+              </span>
+            </div>
+            <div className="flex justify-between gap-3 items-baseline mt-1 bg-ld-navy text-white rounded-xl py-2 px-3.5">
+              <span className="font-bold text-base">LDCU Fireworks</span>
+              <span className="font-extrabold text-sm whitespace-nowrap">10 PM</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p className="text-center font-bold text-[clamp(16px,2vw,20px)] text-[#EF6A5F] mt-[30px] mb-0">
+        Food &amp; merchandise vendors · Fun &amp; games for everyone!
+      </p>
+    </section>
   )
 }
