@@ -9,7 +9,7 @@ export function SectionSchedule() {
       <div className="z-20 mx-auto max-w-2xl rounded-lg bg-white p-8 shadow-lg xl:max-w-5xl">
         <div className="mb-6 -rotate-1 transform bg-ld-green p-6 shadow-lg">
           <h1 className="my-3 font-heading text-4xl font-bold text-ld-yellow">
-            2025 SCHEDULE
+            2026 SCHEDULE
           </h1>
         </div>
 

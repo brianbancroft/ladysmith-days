@@ -14,10 +14,10 @@ import { SectionSchedule } from '~/components/SectionSchedule'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'Ladysmith Days - August 2,3 2025' },
+    { title: 'Ladysmith Days - August 1,2 2026' },
     {
       property: 'og:title',
-      content: 'Ladysmith Days - August 2,3 2025',
+      content: 'Ladysmith Days - August 1,2 2026',
     },
     {
       name: 'description',

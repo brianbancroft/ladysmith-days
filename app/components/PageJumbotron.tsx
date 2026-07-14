@@ -50,7 +50,7 @@ function PageJumbotron(props: Props) {
       <div className="bg-blue-700 px-2 py-4 text-white">
         <p className="text-center font-semibold ">
           {/* Almost always BC Day Weekend */}
-          August 2-3, 2025 • Transfer Beach & Downtown Ladysmith
+          August 1-2, 2026 • Transfer Beach & Downtown Ladysmith
         </p>
       </div>
       {title && subtitle ? (
