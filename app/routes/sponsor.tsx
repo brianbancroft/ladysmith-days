@@ -209,14 +209,14 @@ function SponsorPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={name}
-                className="bg-white border-[3px] border-ld-navy rounded-2xl h-[132px] p-4 flex items-center justify-center shadow-[0_10px_24px_rgba(46,79,163,.12)] transition-all hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(46,79,163,.2)]"
+                className="bg-white border-[3px] border-ld-navy rounded-2xl h-[132px] p-4 flex items-center justify-center overflow-hidden shadow-[0_10px_24px_rgba(46,79,163,.12)] transition-all hover:-translate-y-1 hover:shadow-[0_16px_30px_rgba(46,79,163,.2)]"
               >
                 <img src={img} alt={name} className="max-w-full max-h-full object-contain" />
               </a>
             ) : (
               <div
                 key={name}
-                className="bg-white border-[3px] border-ld-navy rounded-2xl h-[132px] p-4 flex items-center justify-center shadow-[0_10px_24px_rgba(46,79,163,.12)]"
+                className="bg-white border-[3px] border-ld-navy rounded-2xl h-[132px] p-4 flex items-center justify-center overflow-hidden shadow-[0_10px_24px_rgba(46,79,163,.12)]"
               >
                 <img src={img} alt={name} className="max-w-full max-h-full object-contain" />
               </div>

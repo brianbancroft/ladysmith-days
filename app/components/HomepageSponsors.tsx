@@ -40,7 +40,7 @@ export function HomepageSponsors() {
             target={href.startsWith('http') ? '_blank' : undefined}
             rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
             aria-label={label}
-            className="bg-white border-2 border-[#BFD3F2] rounded-2xl h-24 p-3.5 flex items-center justify-center transition-all hover:border-[#F9A55B] hover:shadow-[0_8px_18px_rgba(46,79,163,.14)]"
+            className="bg-white border-2 border-[#BFD3F2] rounded-2xl h-24 p-3.5 flex items-center justify-center overflow-hidden transition-all hover:border-[#F9A55B] hover:shadow-[0_8px_18px_rgba(46,79,163,.14)]"
           >
             <img src={img} alt={label} className="h-full w-full object-contain" />
           </a>
