@@ -1,10 +1,27 @@
 const sponsors = [
-  { bg: 'bg-sponsor-homepage-1', href: 'https://www.ladysmith.ca/', label: 'Town of Ladysmith' },
-  { bg: 'bg-sponsor-homepage-2', href: 'https://www.ldcu.ca/Personal/', label: 'Ladysmith & District Credit Union' },
-  { bg: 'bg-sponsor-bayview', href: '#sponsors', label: 'Bayview Brewing' },
-  { bg: 'bg-sponsor-homepage-5', href: 'https://www.midislandco-op.crs/sites/midisland/', label: 'Mid Island Co-op' },
-  { bg: 'bg-sponsor-eagles', href: '#sponsors', label: 'Ladysmith Eagles' },
-  { bg: 'bg-sponsor-homepage-3', href: 'https://www.ladysmithcofc.com/portfolio/saltair-marine-services-ltd/', label: 'Saltair Marine Services' },
+  {
+    img: '/sponsors-2026/ldcu.png',
+    href: 'https://www.ldcu.ca/Personal/',
+    label: 'Ladysmith & District Credit Union',
+  },
+  { img: '/sponsors-2026/city-of-ladysmith.png', href: 'https://www.ladysmith.ca/', label: 'Town of Ladysmith' },
+  {
+    img: '/sponsors-2026/saltair-marine.png',
+    href: 'https://www.ladysmithcofc.com/portfolio/saltair-marine-services-ltd/',
+    label: 'Saltair Marine Services Ltd.',
+  },
+  { img: '/sponsors-2026/eagles.png', href: '/sponsor#wall', label: 'Ladysmith Eagles' },
+  {
+    img: '/sponsors-2026/great-canadian-dollar-store.png',
+    href: '/sponsor#wall',
+    label: 'Great Canadian Dollar Store',
+  },
+  { img: '/sponsors-2026/kinsmen-club-of-ladysmith.png', href: '/sponsor#wall', label: 'Kinsmen Club of Ladysmith' },
+  {
+    img: '/sponsors-2026/pacific-industrial-marine.png',
+    href: '/sponsor#wall',
+    label: 'Pacific Industrial & Marine Inc.',
+  },
 ]
 
 export function HomepageSponsors() {
@@ -16,16 +33,16 @@ export function HomepageSponsors() {
         </h2>
       </div>
       <div className="grid gap-3.5" style={{ gridTemplateColumns: 'repeat(auto-fit,minmax(min(160px,100%),1fr))' }}>
-        {sponsors.map(({ bg, href, label }) => (
+        {sponsors.map(({ img, href, label }) => (
           <a
             key={label}
             href={href}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={href.startsWith('http') ? '_blank' : undefined}
+            rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
             aria-label={label}
             className="bg-white border-2 border-[#BFD3F2] rounded-2xl h-24 p-3.5 flex items-center justify-center transition-all hover:border-[#F9A55B] hover:shadow-[0_8px_18px_rgba(46,79,163,.14)]"
           >
-            <div className={`h-full w-full bg-contain bg-center bg-no-repeat ${bg}`} />
+            <img src={img} alt={label} className="h-full w-full object-contain" />
           </a>
         ))}
       </div>
