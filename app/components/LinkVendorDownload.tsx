@@ -1,3 +1,4 @@
+import posthog from 'posthog-js'
 import DownloadIcon from './DownloadIcon'
 type Props = {
   pdfDocument: string
@@ -13,7 +14,18 @@ function LinkVendorDownload(props: Props) {
     soldOut ? (
       <div className="cursor-not-allowed select-none">{children}</div>
     ) : (
-      <a className="" href={pdfDocument} target="_blank" rel="noreferrer">
+      <a
+        className=""
+        href={pdfDocument}
+        target="_blank"
+        rel="noreferrer"
+        onClick={() => {
+          posthog.capture('vendor_form_downloaded', {
+            vendor_type: label,
+            pdf_document: pdfDocument,
+          })
+        }}
+      >
         {children}
       </a>
     )

@@ -1,0 +1,22 @@
+[
+  {
+    "event_name": "contact_form_submitted",
+    "event_description": "Fired when a user submits the general contact form on any page (sponsor, vendor, homepage).",
+    "file": "app/components/FormContactGeneral.tsx"
+  },
+  {
+    "event_name": "vendor_form_downloaded",
+    "event_description": "Fired when a vendor clicks to download a PDF application form (food or merchandise).",
+    "file": "app/components/LinkVendorDownload.tsx"
+  },
+  {
+    "event_name": "community_award_nomination_clicked",
+    "event_description": "Fired when a user clicks the 'Nominate someone now' link on the Community Impact Award page.",
+    "file": "app/routes/citizen-of-the-year.tsx"
+  },
+  {
+    "event_name": "get_involved_cta_clicked",
+    "event_description": "Fired when a user clicks one of the 'Get Involved' CTA cards (Volunteer, Sponsor, Vendor) on the homepage.",
+    "file": "app/components/SectionGetInvolved.tsx"
+  }
+]

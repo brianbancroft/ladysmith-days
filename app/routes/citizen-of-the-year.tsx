@@ -1,4 +1,5 @@
 import { type MetaFunction } from '@remix-run/node'
+import posthog from 'posthog-js'
 import CitizenArchive from '~/components/CitizenArchive'
 import CitizenLatest from '~/components/CitizenLatest'
 import CitizenRecent from '~/components/CitizenRecent'
@@ -57,7 +58,8 @@ const CitizenOfTheYearPage = () => {
                 href={NOMINATION_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg bg-purple-700 px-8 py-3 text-lg font-semibold text-white transition-colors duration-300 hover:bg-purple-800"
+                onClick={() => posthog.capture('community_award_nomination_clicked')}
+              className="inline-block rounded-lg bg-purple-700 px-8 py-3 text-lg font-semibold text-white transition-colors duration-300 hover:bg-purple-800"
               >
                 Nominate someone now
               </a>

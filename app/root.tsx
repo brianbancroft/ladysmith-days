@@ -1,5 +1,6 @@
 import './tailwind.css'
 import 'react-toastify/dist/ReactToastify.css'
+import { useEffect } from 'react'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 import { ToastContainer } from 'react-toastify'
 import {
@@ -16,7 +17,9 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
+  useLocation,
 } from '@remix-run/react'
+import posthog from 'posthog-js'
 import Footer from '~/components/Footer'
 import Nav from '~/components/Nav'
 import DefaultErrorBoundary from '~/components/ui/error-boundary'
@@ -103,6 +106,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const location = useLocation()
+
+  useEffect(() => {
+    posthog.capture('$pageview', { $current_url: window.location.href })
+  }, [location.pathname])
+
   return <Outlet />
 }
 

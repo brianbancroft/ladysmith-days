@@ -1,4 +1,5 @@
 import { Link } from '@remix-run/react'
+import posthog from 'posthog-js'
 
 const cards = [
   { to: '/volunteer', label: 'Volunteer with us →', bg: 'bg-call-homepage-volunteer', position: 'bg-center' },
@@ -24,6 +25,7 @@ function SectionGetInvolved() {
           <Link
             key={to}
             to={to}
+            onClick={() => posthog.capture('get_involved_cta_clicked', { cta_label: label, cta_destination: to })}
             className={`relative flex items-end h-[170px] rounded-2xl overflow-hidden bg-cover ${bg} ${position} shadow-[0_10px_26px_rgba(46,79,163,.18)] transition-all hover:-translate-y-1 hover:shadow-[0_16px_32px_rgba(46,79,163,.28)]`}
           >
             <span className="w-full bg-gradient-to-t from-blue-800/95 to-blue-800/0 text-ld-gold font-extrabold text-xl pt-[26px] pb-3 px-4">

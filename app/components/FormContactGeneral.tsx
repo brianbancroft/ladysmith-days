@@ -1,4 +1,5 @@
 import { Form } from '@remix-run/react'
+import posthog from 'posthog-js'
 
 type FormProps = {
   title?: string
@@ -21,7 +22,14 @@ const FormContactGeneral = ({
         </h2>
       )}
       <p className="mb-6 text-gray-600 leading-relaxed">{description}</p>
-      <Form className="flex flex-col gap-4" action={route} method="post">
+      <Form
+        className="flex flex-col gap-4"
+        action={route}
+        method="post"
+        onSubmit={() => {
+          posthog.capture('contact_form_submitted', { page: route })
+        }}
+      >
         <input
           required
           type="text"
