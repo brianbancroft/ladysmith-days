@@ -36,7 +36,7 @@ const saturday: ScheduleVenue[] = [
       { title: 'Ladysmith Days Expo & Market', time: '10 AM', emphasis: true },
       { title: 'Kids Crafts Table', time: '10 AM' },
       { title: 'Old Time Games', time: '12 PM' },
-      { title: 'Beer Garden', time: '12 PM' },
+      { title: 'Beer Garden', time: '4 PM' },
       { title: 'Kids Entertainment (Woodstick)', time: '12 PM' },
       { title: 'Nail Driving Contest', time: '1 PM' },
       { title: 'Zucchini Races', time: '2 PM' },
