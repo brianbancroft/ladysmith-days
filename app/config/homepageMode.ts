@@ -10,4 +10,4 @@
  */
 export type HomepageMode = 'ramp-up' | 'active' | 'post'
 
-export const HOMEPAGE_MODE: HomepageMode = 'active'
+export const HOMEPAGE_MODE: HomepageMode = 'post'
