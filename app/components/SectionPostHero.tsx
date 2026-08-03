@@ -18,7 +18,7 @@ function SectionPostHero() {
           Thank you, Ladysmith
         </h1>
         <p className="m-0 text-[#FFF3D6] font-semibold text-[clamp(17px,2.1vw,23px)] leading-relaxed text-pretty">
-          You filled the beach, the mall and downtown for two straight days. Ladysmith Days 2026 is over,
+          Over the weekend, you filled the beach and downtown. Ladysmith Days 2026 is over,
           and it was a good one.
         </p>
         <div className="flex gap-3.5 flex-wrap justify-center mt-1.5">

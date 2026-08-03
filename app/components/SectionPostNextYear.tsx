@@ -46,7 +46,8 @@ function SectionPostNextYear() {
             </span>
           </div>
           <h2 className="m-0 font-bold text-[clamp(20px,2.6vw,30px)] text-white text-pretty">
-            Next year is the 60th anniversary — and we're going to make a weekend of it
+            Next year is the 60th anniversary — and we're making it bigger: a weekend-long celebration you'll
+            never forget
           </h2>
           <div className="w-[110px] h-1.5 bg-ld-gold rounded-full mt-1" />
           <p className="m-0 font-medium text-[17px] text-blue-200 max-w-xl text-pretty">
