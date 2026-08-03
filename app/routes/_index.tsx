@@ -7,7 +7,6 @@ import { HomepageSponsors } from '~/components/HomepageSponsors'
 import SectionComingSoon from '~/components/SectionComingSoon'
 import SectionGetInvolved from '~/components/SectionGetInvolved'
 import SectionHero from '~/components/SectionHero'
-import SectionPostGallery from '~/components/SectionPostGallery'
 import SectionPostHero from '~/components/SectionPostHero'
 import SectionPostNextYear from '~/components/SectionPostNextYear'
 import SectionPostSponsors from '~/components/SectionPostSponsors'
@@ -49,7 +48,6 @@ export default function Index() {
       <main className="w-full bg-[#FFF6EC] text-ld-navy">
         <SectionPostHero />
         <SectionPostThanks />
-        <SectionPostGallery />
         <SectionPostSponsors />
         <SectionPostNextYear />
       </main>
