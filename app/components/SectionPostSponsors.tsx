@@ -1,26 +1,55 @@
 const mainSponsors = [
   { img: '/sponsors-2026/ldcu.png', href: 'https://www.ldcu.ca/Personal/', label: 'Ladysmith & District Credit Union' },
   { img: '/sponsors-2026/city-of-ladysmith.png', href: 'https://www.ladysmith.ca/', label: 'Town of Ladysmith' },
-  {
-    img: '/sponsors-2026/saltair-marine.png',
-    href: 'https://www.ladysmithcofc.com/portfolio/saltair-marine-services-ltd/',
-    label: 'Saltair Marine Services Ltd.',
-  },
+  { img: '/sponsors-2026/pacific-industrial-marine.png', href: '/sponsor#wall', label: 'Pacific Industrial & Marine Inc.' },
   { img: '/sponsors-2026/eagles.png', href: '/sponsor#wall', label: 'Ladysmith Eagles' },
   {
     img: '/sponsors-2026/great-canadian-dollar-store.png',
     href: '/sponsor#wall',
     label: 'Great Canadian Dollar Store',
   },
+  { img: '/sponsors-2026/save-on-foods.png', href: '/sponsor#wall', label: 'Save On Foods' },
   { img: '/sponsors-2026/kinsmen-club-of-ladysmith.png', href: '/sponsor#wall', label: 'Kinsmen Club of Ladysmith' },
-  { img: '/sponsors-2026/pacific-industrial-marine.png', href: '/sponsor#wall', label: 'Pacific Industrial & Marine Inc.' },
+  {
+    img: '/sponsors-2026/saltair-marine.png',
+    href: 'https://www.ladysmithcofc.com/portfolio/saltair-marine-services-ltd/',
+    label: 'Saltair Marine Services Ltd.',
+  },
 ]
 
-const goldSponsors = ['FMI', 'A&W', 'Bethel Church', "McDonald's Ladysmith", 'Bayview Brewing', "Stz'uminus First Nation"]
+const goldSponsors = [
+  'FMI',
+  'A&W',
+  'Bethel Church Ladysmith',
+  "McDonald's Ladysmith",
+  'Bayview Brewing',
+  "Stz'uminus First Nation",
+  'Fraternal Order of Eagles Ladysmith Aerie #2101',
+]
 
-const silverSponsors = ['Spyder Graphix', 'CUPE 606', 'Anne-Lynn Design', 'Fishing for Fun', 'Save on Foods', 'Country Grocer']
+const silverSponsors = ['Spyder Graphix', 'CUPE 606', 'Anne-Lynn Design', 'Fishing for Fun', 'Country Grocer']
 
-const bronzeSponsors = ['Robert St. Pizza', 'Ladysmith Pharmasave']
+const bronzeSponsors = [
+  'Robert St. Pizza',
+  'Ladysmith Pharmasave',
+  'Costco',
+  'Bayview Framing',
+  'Ladysmith Little Theatre & Musical Arts',
+  'Sealegs Kayaks',
+  'Bahai Faith Community',
+  'Chemainus Theatre Festival',
+  'ABCB First Aid & Safety Training',
+  'Jessica Knelson',
+  'Coco Cafe',
+  '1948 Bistro',
+  'Best Western Chemainus',
+  'GFL',
+  'Mactier Real Estate Group',
+  'Ladysmith 7-11',
+  'Ladysmith Subway',
+  'Extend Rentals',
+  'Sunset Strip',
+]
 
 function SectionPostSponsors() {
   return (
